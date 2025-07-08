@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('wallet_id')->constrained('wallets');
+            $table->enum('type', ['deposit', 'transfer', 'reversal']);
+            $table->decimal('amount', 15, 2);
+            $table->string('description')->nullable();
+            $table->foreignId('related_user_id')->nullable()->constrained('users');
+            $table->boolean('reversed')->default(false);
             $table->timestamps();
         });
     }
