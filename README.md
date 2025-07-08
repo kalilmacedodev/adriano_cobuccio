@@ -11,6 +11,10 @@ Construí a API solicitada com os seguintes endpoints:
 - POST /api/wallet/transfer
 - POST /api/wallet/reverse
 
+## 📄 Documentação
+
+[Visualizar documentação em PDF](docs/documentacao.pdf)
+
 ## ✨ Funcionalidades
 
 - 🔐 **Autenticação via token (Sanctum)**
