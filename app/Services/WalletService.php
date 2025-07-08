@@ -119,7 +119,9 @@ class WalletService
                         'timestamp' => now(),
                     ]);
 
-                    throw new \Exception('Saldo insuficiente para reverter depósito.');
+                    throw ValidationException::withMessages([
+                        'transaction' => 'Saldo insuficiente para reverter depósito.',
+                    ]);
                 }
 
                 $wallet->balance -= $transaction->amount;
