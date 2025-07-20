@@ -18,4 +18,10 @@ class WalletPolicy
         // Só pode transferir da própria wallet
         return $user->id === $wallet->user_id;
     }
+
+    public function reverse(User $user, Wallet $wallet)
+    {
+        // Só pode transferir da própria wallet
+        return $user->id === $wallet->user_id;
+    }
 }

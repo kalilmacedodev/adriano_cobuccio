@@ -113,7 +113,7 @@ class WalletController extends Controller
             // Qualquer outro erro inesperado
             return response()->json([
                 'message' => 'Erro interno no servidor.',
-                'error' => $e->getMessage(), // remova em produção por segurança
+                'error' => $e->getMessage(),
             ], 500);
         }
     }
